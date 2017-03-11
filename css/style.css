@@ -6,7 +6,12 @@
 */
 
 /* CSS Document */
-
+@font-face {
+  font-family: 'JandaElegantHandwriting.ttf';
+  src: url('../fonts/JandaElegantHandwriting.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Float Elements 
 ---------------------------------*/
 .fl-lt {float:left;}
@@ -107,11 +112,11 @@ p{
 	padding:40px 0;
 }
 .logo{
-	width:130px;
+	width:200px;
 	margin:0 auto 35px;
 }
 .header h1{
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'JandaElegantHandwriting.ttf',sans-serif;
 	font-size:50px;
 	font-weight:400;
 	letter-spacing: -1px;
