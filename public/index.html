@@ -46,7 +46,7 @@
         <ul class="we-create animated fadeInUp delay-1s">
         	<li>Illustrator/Graphic Designer</li>
         </ul>
-            <a class="link animated fadeInUp delay-1s" href="#Portfolio">Check Out My Work</a>
+            <a id='portlink' class="link animated fadeInUp delay-1s" href="#Portfolio">Check Out My Work</a>
     </div>
 </header><!--header-end-->
 
@@ -54,10 +54,7 @@
 	<div class="container">
         <ul class="main-nav">
         	<li><a href="#header">Home</a></li>
-           
             <li><a href="#Portfolio">Portfolio</a></li>
-            
-            
             <li><a href="https://drive.google.com/file/d/0B_1KgyKeq6wDeEpVcEpRWWt5c28/view?usp=sharing" target='_none'>Resume</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -233,6 +230,25 @@
     wow.init();
   </script>
 
+<script type="text/javascript">
+    $(window).load(function(){
+        
+        $('#portlink').bind('click',function(event){
+            var $anchor = $(this);
+            
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top - 102
+            }, 1500,'easeInOutExpo');
+            /*
+            if you don't want to use the easing effects:
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1000);
+            */
+            event.preventDefault();
+        });
+    })
+</script>
 
 <script type="text/javascript">
 	$(window).load(function(){
